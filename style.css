@@ -1,0 +1,230 @@
+body {
+    font-family: 'Maven Pro', sans-serif;
+    background: linear-gradient(to bottom, #F3F3F3, #E0E0E0); /* Gradient background */
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444554;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; /* Add corner radius */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    color: #F3F3F3;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 16px; /* Add corner radius to links */
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+#home img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px; /* Add some space between the logo and the nav items */
+}
+
+/* Hero section */
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 24px; /* Add space between navbar and hero image */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a background color with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px; /* Set a maximum width */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    font-size: 1.5em; /* Default font size */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Responsive hero text */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 1em; /* Adjust font size for very small screens */
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+}
+
+/* Responsive hero text */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 1em; /* Adjust font size for very small screens */
+        padding: 10px; /* Adjust padding for very small screens */
+    }
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+nav ul.active {
+    display: flex;
+}
+
+/* Footer */
+footer {
+    background-color:#444554; /* Black footer */
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    color: #F3F3F3;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#other{
+    background: linear-gradient(to top, #5f2b2b, #C0C0C0); /* Gradient background for the section */
+    padding: 20px;
+    min-height: 100vh; /* Ensure the section covers the full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gallery section */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery img {
+    width: 32%; /* Show 3 images at a time */
+    flex-shrink: 0;
+    margin: 10px;
+    border-radius: 16px;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.gallery-nav.left {
+    left: 0;
+}
+
+.gallery-nav.right {
+    right: 0;
+}
