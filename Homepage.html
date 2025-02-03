@@ -10,12 +10,13 @@
 <body>
     <header>
         <nav>
-            <img src="/Media/Images/Logo/Photo Bud.png" alt="Photobucket Logo" class="logo">
+            <img src="/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Packages.html">Packages</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
@@ -26,48 +27,72 @@
     </header>
     <main>
         <section id="home" class="hero-section">
-            <img src="/Media/Images/optimized/Hero.png" alt="Northern Lights" class="hero-image">
-            <!--<video src="/Media/Videos/mountain.mp4" alt="Northern Lights" class="hero-image" autoplay>-->
             <div class="hero-text">
                 <h2>Welcome to Photobucket</h2>
                 <p>Your one-stop destination for amazing photos.</p>
             </div>
+            
         </section>
         <section id="about">
+            <div class="container">
             <h2>About Us</h2>
             <p>A photographer is more than just someone who takes pictures; they are storytellers, artists, and visionaries. With a camera in hand, they freeze fleeting moments, turning ordinary scenes into extraordinary memories. Whether capturing the raw emotions of a wedding, the breathtaking beauty of nature, or the fast-paced energy of a bustling city, photographers see the world through a unique lens.</p>
+        </div>
         </section>
         <section id="gallery" class="gallery-section">
+            <div class="container">
             <h2>Featured Gallery</h2>
             <p>This is some of my work</p>
             <div class="gallery-container">
-                <button class="gallery-nav left" onclick="scrollGallery(-1)">&#10094;</button>
+                <button class="gallery-nav left" onclick="scrollGallery(-1)">&#9001;</button>
                 <div class="gallery-wrapper">
                     <div class="gallery">
-                        <img src="/Media/Images/raw/colin-watts-g9aYfZb7_c8-unsplash.jpg" alt="Gallery Image 1">
-                        <img src="/Media/Images/raw/francesco-ungaro-ungarophrancesco-WfjicatUkjA-unsplash.jpg" alt="Gallery Image 2">
-                        <img src="/Media/Images/raw/tharun-thejus-fuzPjmyGWaA-unsplash.jpg" alt="Gallery Image 3">
-                        <img src="/Media/Images/raw/joshua-kettle-j_3V0XBUMmQ-unsplash.jpg" alt="Gallery Image 4">
-                        <img src="/Media/Images/raw/francesco-ungaro-ungarophrancesco-WfjicatUkjA-unsplash.jpg" alt="Gallery Image 5">
-                        <img src="/Media/Images/raw/sung-jin-cho-hMgFCMx3Rrs-unsplash.jpg" alt="Gallery Image 6">
+                        <img src="/Media/Images/raw/colin-watts-g9aYfZb7_c8-unsplash.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+                        <img src="/Media/Images/raw/francesco-ungaro-ungarophrancesco-WfjicatUkjA-unsplash.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+                        <img src="/Media/Images/raw/tharun-thejus-fuzPjmyGWaA-unsplash.jpg" alt="Gallery Image 3" onclick="openModal(this)">
+                        <img src="/Media/Images/raw/joshua-kettle-j_3V0XBUMmQ-unsplash.jpg" alt="Gallery Image 4" onclick="openModal(this)">
+                        <img src="/Media/Images/raw/francesco-ungaro-ungarophrancesco-WfjicatUkjA-unsplash.jpg" alt="Gallery Image 5" onclick="openModal(this)">
+                        <img src="/Media/Images/raw/sung-jin-cho-hMgFCMx3Rrs-unsplash.jpg" alt="Gallery Image 6" onclick="openModal(this)">
                     </div>
                 </div>
-                <button class="gallery-nav right" onclick="scrollGallery(1)">&#10095;</button>
+                <button class="gallery-nav right" onclick="scrollGallery(1)">&#9002;</button>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us.</p>
+        </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Photobucket. All rights reserved.</p>
-        <h2 id="bottomlinks">Related Links</h2>
-        <ul>
-            <li><a href="#link1">Link 1</a></li>
-            <li><a href="#link2">Link 2</a></li>
-        </ul>
+        <div class="container">
+            <div class="footer-item">
+                <img src="/Media/Images/Logo/Logo.png" alt="">
+            </div>
+            <div class="footer-item">
+                <h3>Welcome</h3>
+                <a href="#link">Link</a>
+                <a href="#link">Link</a>
+                <a href="#link">Link</a>
+            </div>
+            <div class="footer-item">
+                <h3>Welcome</h3>
+                <a href="#link">Link</a>
+                <a href="#link">Link</a>
+                <a href="#link">Link</a>
+            </div>
+            <div class="footer-item">
+                <h3>Welcome</h3>
+                <a href="#link">Link</a>
+                <a href="#link">Link</a>
+                <a href="#link">Link</a>
+            </div>
+        </div>
+        <p>&copy; 2025 Photobucket. All rights reserved.</p>
     </footer>
+
+    <!-- Modal for image pop-up -->
+    <div id="imageModal" class="modal" style="display:none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script src="interactivity.js"></script>
 </body>
 </html>
