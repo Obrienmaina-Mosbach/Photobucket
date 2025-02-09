@@ -18,7 +18,6 @@
             padding: 20px;
         }
 
-        /* Header Style with Rounded Corners */
         .header {
             display: flex;
             justify-content: space-between;
@@ -26,8 +25,8 @@
             color: white;
             padding: 10px 0;
             margin-bottom: 20px;
-            border-radius: 15px; /* Rounded corners */
-            overflow: hidden; /* Ensures the rounded corners work properly */
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         .header a {
@@ -46,7 +45,7 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 15px; /* Rounded corners */
+            border-radius: 15px;
         }
 
         .images {
@@ -57,23 +56,27 @@
 
         .images img {
             width: 30%;
-            border-radius: 15px; /* Rounded corners for images */
+            border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <!-- Header with navigation links -->
         <div class="header">
-            <a href="#america">America</a>
-            <a href="#europe">Europe</a>
-            <a href="#africa">Africa</a>
-            <a href="#asia">Asia</a>
+            <a href="#Homepage">Homepage</a>
+            <a href="#About">About</a>
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#Packages">Packages</a>
+            <a href="#Contact">Contact</a> 
         </div>
 
-        <!-- America Section with Images -->
         <div class="section" id="america">
             <h2>America</h2>
             <div class="images">
@@ -83,7 +86,6 @@
             </div>
         </div>
 
-        <!-- Europe Section with Images -->
         <div class="section" id="europe">
             <h2>Europe</h2>
             <div class="images">
@@ -93,7 +95,6 @@
             </div>
         </div>
 
-        <!-- Africa Section with Images -->
         <div class="section" id="africa">
             <h2>Africa</h2>
             <div class="images">
@@ -103,7 +104,6 @@
             </div>
         </div>
 
-        <!-- Asia Section with Images -->
         <div class="section" id="asia">
             <h2>Asia</h2>
             <div class="images">
@@ -113,9 +113,6 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
-
-
 
