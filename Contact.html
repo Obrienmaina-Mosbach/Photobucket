@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .header {
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .form-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .form-container {
+            flex-grow: 1;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .social-media a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #555;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-media a:hover {
+            color: #007BFF;
+        }
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="header">
+    <h1>Contact</h1>
+</div>
+<div class="container">
+    <h2 class="title">Contact Me</h2>
+    <div class="form-section">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1508852951744-beab078a4b2b?q=80&w=2754&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Smiling Person">
+        </div>
+        <div class="form-container">
+            <form action="/submit-form" method="POST">
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="social-media">
+        <p>Follow me on:</p>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
+<div class="footer">
+    &copy; 2025 Contact Me Page. All Rights Reserved.
+</div>
+</body>
+</html>
