@@ -22,27 +22,75 @@
             padding: 0;
         }
  
-        .navbar {
-            background-color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: var(--text-color);
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            color: var(--accent-color);
-        }
- 
-        .container {
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(68, 69, 84);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem; /* Add corner radius */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    width:100%;
+    z-index:1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    color: #F3F3F3;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 16px; /* Add corner radius to links */
+}
+
+nav ul li a:hover {
+    background-color: #F3F3F3;
+    color: #444554;
+}
+
+.logo {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px; /* Add some space between the logo and the nav items */
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+}
+
+
+nav ul.active {
+    display: flex;
+}       .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
@@ -102,6 +150,40 @@
             color: var(--accent-color);
             margin-top: 10px;
         }
+
+        /* Footer */
+footer {
+    background-color:#444554; /* Black footer */
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    color: #F3F3F3;
+    text-align: center;
+    padding: 10px 0;
+}
+footer .container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .container .footer-item{
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    height:max-content;
+    min-height:200px;
+    background-color: #444554;
+}
+.container{
+    margin:0 auto;
+    width:80%;
+}
+
+footer .container .footer-item img{
+
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
  
         /* Responsive */
         @media (max-width: 768px) {
@@ -117,13 +199,23 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#packages">Packages</a>
-        <a href="#contact">Contact</a>
-    </div>
+<header>
+    <nav>
+        <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo">
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Packages.html">Packages</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</header>
  
     <div class="container">
         <h1>Photography Packages</h1>
@@ -170,6 +262,33 @@
     </div>
  
 </body>
+<footer>
+    <div class="container">
+        <div class="footer-item">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo" alt="">
+        </div>
+        <div class="footer-item">
+            <h3>Welcome</h3>
+            <a href="#link">Link</a>
+            <a href="#link">Link</a>
+            <a href="#link">Link</a>
+        </div>
+        <div class="footer-item">
+            <h3>Welcome</h3>
+            <a href="#link">Link</a>
+            <a href="#link">Link</a>
+            <a href="#link">Link</a>
+        </div>
+        <div class="footer-item">
+            <h3>Welcome</h3>
+            <a href="Packages.html">Link</a>
+            <a href="#link">Link</a>
+            <a href="#link">Link</a>
+        </div>
+    </div>
+    <p>&copy; 2025 Photobucket. All rights reserved.</p>
+</footer>
+
 </html>
  
  
