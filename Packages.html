@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Packages</title>
+    <style>
+        :root {
+            --background-color: #f9f9f9;
+            --accent-color: #444554;
+            --text-color: #444554;
+            --secondary-text-color: #666666;
+            --stars-color: #E5D0CC;
+            --border-color: #e0e0e0;
+        }
+ 
+        body {
+            font-family: 'Maven Pro', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+ 
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        /* Packages Section */
+        .packages {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            margin-top: 30px;
+        }
+ 
+        .package {
+            background-color: #F3F3F3;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+ 
+        .package:hover {
+            transform: scale(1.02);
+        }
+ 
+        .package:nth-child(odd) {
+            flex-direction: row;
+        }
+ 
+        .package:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+ 
+        .package-img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+ 
+        .package-description {
+            width: 50%;
+            text-align: left;
+        }
+ 
+        .package-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 10px;
+        }
+ 
+        /* Responsive */
+        @media (max-width: 768px) {
+            .package {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .package-img, .package-description {
+                width: 100%;
+            }
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+    </div>
+ 
+    <div class="container">
+        <h1>Photography Packages</h1>
+        
+        <div class="packages">
+            <!-- Package 1 (Image Right) -->
+            <div class="package">
+                <div class="package-description">
+                    <h2>Basic Package</h2>
+                    <p>Perfect for solo photoshoots or small events. Includes a 1-hour shoot and 20 edited photos.</p>
+                    <div class="package-price">€300</div>
+                </div>
+                <img src="/assets/Famil_Package.png" alt="Basic Package" class="package-img">
+            </div>
+ 
+            <!-- Package 2 (Image Left) -->
+            <div class="package">
+                <div class="package-description">
+                    <h2>Standard Package</h2>
+                    <p>Ideal for couples or small groups. Includes a 2-hour shoot, 50 edited photos, and a personalized album.</p>
+                    <div class="package-price">€500</div>
+                </div>
+                <img src="image2.png" alt="Standard Package" class="package-img">
+            </div>
+ 
+            <!-- Package 3 (Image Right) -->
+            <div class="package">
+                <div class="package-description">
+                    <h2>Premium Package</h2>
+                    <p>Tailored to your unique travel photography needs. Flexible number of locations or days. Can include candid shots, cultural immersion photos, or specific themes.</p>
+                    <div class="package-price">€900</div>
+                </div>
+                <img src="image3.png" alt="Premium Package" class="package-img">
+            </div>
+ 
+        </div>
+ 
+        <div class="footer">
+            <p>Follow me on:</p>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+ 
+    </div>
+ 
+</body>
+</html>
+ 
+ 

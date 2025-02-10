@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Photography</title>
+    <style>
+        :root {
+            --background-color: #f9f9f9;
+            --accent-color: #ffcc66;
+            --text-color: #333333;
+            --secondary-text-color: #666666;
+            --stars-color: #f5b700;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: 'Maven Pro', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+ 
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+ 
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+ 
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+ 
+        /* Reviews Section */
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+ 
+        .review {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.2s ease-in-out;
+        }
+ 
+        .review:hover {
+            transform: scale(1.05);
+        }
+ 
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+ 
+        .reviewer-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            margin-right: 10px;
+        }
+ 
+        .stars {
+            color: var(--stars-color);
+        }
+ 
+        /* Logos Section */
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+ 
+        .company-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+ 
+        .company-logo:hover {
+            opacity: 1;
+        }
+ 
+        /* Footer */
+        .footer {
+            background-color: var(--secondary-color);
+            text-align: center; /* Center aligns the text and links */
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center-align the content horizontally */
+        }
+        
+        .footer a {
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+    </div>
+ 
+    <div class="container">
+        <img src="photographer.jpg" alt="Photographer" class="profile-pic">
+        <h1>About Me</h1>
+        <p>
+            Hey! I’m Mark, a 29-year-old photographer from California, and my camera has taken me to some of the most breathtaking places on Earth. From the towering peaks of the Swiss Alps to the vibrant streets of Tokyo, I find beauty in every corner of the world. My passion lies in capturing raw, unfiltered moments—whether it's the golden sunset over the Santorini coastline or the quiet charm of a hidden Parisian café.
+ 
+                I shoot with a Canon EOS R5, paired with my favorite 50mm prime lens for crisp portraits and a 16-35mm wide-angle lens for those sweeping landscape shots. Whether I’m photographing a solo traveler, a couple’s love story, or a breathtaking cityscape, my goal is always the same: to turn moments into memories.
+                
+                Where will my next adventure take me? Maybe to tell your story.
+        </p>
+        <div class="reviews">
+            <div class="review">
+                <div class="review-header">
+                    <img src="review1.jpg" alt="Chris W. Balmer" class="reviewer-photo">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <h3>Jessy W. Balmer</h3>
+                    </div>
+                </div>
+                <p>"Made me feel so confident and photos came out well."</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <img src="review2.jpg" alt="Jack Bies" class="reviewer-photo">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <h3>Jack Bies</h3>
+                    </div>
+                </div>
+                <div class="review-body">
+                    <p>"Trust him with your occasions,his a five star."</p>
+                    <a href="#" class="read-more">Read the full review</a>
+                </div>
+            </div>
+        
+            <div class="review">
+                <div class="review-header">
+                    <img src="review3.jpg" alt="Oscar Franco" class="reviewer-photo">
+                    <div>
+                        <div class="stars">★★★★★</div>
+                        <h3>Jane Franco</h3>
+                    </div>
+                </div>
+                <div class="review-body">
+                    <p>"Such a kind and experienced photographer."</p>
+                    <a href="#" class="read-more">Read the full review</a>
+                </div>
+            </div>
+        </div>
+            <!-- Add more reviews similarly -->
+        </div>
+ 
+        <div class="company-logos">
+            <img src="nike.png" alt="Company 1" class="company-logo">
+            <img src="babystore.png" alt="Company 2" class="company-logo">
+            <img src="adidas.webp" alt="Company 3" class="company-logo">
+            <img src="crux.png" alt="Company 4" class="company-logo">
+            <img src="cox.png" alt="Company 5" class="company-logo">
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>Follow me on:</p>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+    </div>
+</body>
+</html>
