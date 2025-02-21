@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/Logo/Favicon.png?raw=true" type="image/x-icon">
     <title>Photography Packages</title>
     <style>
         :root {
-            --background-color: #f9f9f9;
+            --background-color: #F3F3F3;
             --accent-color: #444554;
             --text-color: #444554;
             --secondary-text-color: #666666;
             --stars-color: #E5D0CC;
             --border-color: #e0e0e0;
         }
- 
+
+        html {
+            overscroll-behavior: none;
+            -webkit-overflow-scrolling: none;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Maven Pro', sans-serif;
             background-color: var(--background-color);
@@ -21,82 +30,94 @@
             margin: 0;
             padding: 0;
         }
- 
+
         nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(68, 69, 84);
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem; /* Add corner radius */
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-top: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    width:100%;
-    z-index:1;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(68, 69, 84);
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem; /* Add corner radius */
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-top: 20px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            z-index: 1;
+        }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
 
-nav ul li {
-    display: inline;
-}
+        nav ul li {
+            display: inline;
+        }
 
-nav ul li a {
-    display: block;
-    color: #F3F3F3;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border-radius: 16px; /* Add corner radius to links */
-}
+        nav ul li a {
+            display: block;
+            color: #F3F3F3;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 16px; /* Add corner radius to links */
+        }
 
-nav ul li a:hover {
-    background-color: #F3F3F3;
-    color: #444554;
-}
+        nav ul li a:hover {
+            background-color: #F3F3F3;
+            color: #444554;
+        }
 
-.logo {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 20px; /* Add some space between the logo and the nav items */
-}
+        .logo {
+            width: 200px; /* Adjust size as needed */
+            height: auto;
+            margin-right: 20px; /* Add some space between the logo and the nav items */
+        }
 
-/* Hamburger menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px;
-}
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px;
+        }
 
+        a:active {
+            color: #172121;
+        }
 
-nav ul.active {
-    display: flex;
-}       .container {
+        a:hover {
+            color: #F3F3F3;
+        }
+
+        a {
+            color: #BFACB5;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        .container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             text-align: center;
         }
- 
+
         /* Packages Section */
         .packages {
             display: flex;
@@ -105,50 +126,107 @@ nav ul.active {
             align-items: center;
             margin-top: 30px;
         }
- 
+
         .package {
-            background-color: #F3F3F3;
+            background: linear-gradient(0.30turn, #172121, #444554, #E5D0CC);
+            color: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 80%;
             max-width: 800px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             padding: 20px;
             gap: 20px;
             transition: transform 0.2s ease-in-out;
         }
- 
+
+        #Standard {
+            background: linear-gradient(0.30turn, #E5D0CC, #444554, #172121);
+        }
+
         .package:hover {
             transform: scale(1.02);
         }
- 
+
         .package:nth-child(odd) {
             flex-direction: row;
         }
- 
+
         .package:nth-child(even) {
             flex-direction: row-reverse;
         }
- 
+
         .package-img {
             width: 50%;
             height: auto;
             object-fit: cover;
             border-radius: 10px;
         }
- 
+
         .package-description {
             width: 50%;
             text-align: left;
+            font-weight: lighter;
         }
- 
+
+        .package-description h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .package-description p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
         .package-price {
-            font-size: 1.2rem;
+            font-size: 2rem;
             font-weight: bold;
-            color: var(--accent-color);
+            color: #ebf8e1;
             margin-top: 10px;
+        }
+
+        .package-list {
+            list-style: none;
+            padding: 10px;
+            margin: 10px 20px;
+        }
+
+        .package-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .package-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #ebf8e1;
+            font-size: 1.2rem;
+        }
+
+        .package-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color:#E5D0CC;
+            color:#444554;
+            text-decoration: none;
+            border-radius: 16px;
+            transition: background-color 0.3s ease;
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+        .package-button:hover {
+            background-color:#e0e0e0;
+            color:#444554;
+            /*border: #E5D0CC 3px solid ;*/
         }
 
         /* Footer */
@@ -159,19 +237,22 @@ footer {
     color: #F3F3F3;
     text-align: center;
     padding: 10px 0;
+    align-items: center;
 }
 footer .container{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 footer .container .footer-item{
     width:30%;
     display:flex;
     flex-direction: column;
     height:max-content;
-    min-height:200px;
     background-color: #444554;
+    align-items: center;
+    
 }
 .container{
     margin:0 auto;
@@ -182,20 +263,56 @@ footer .container .footer-item img{
 
     width: 200px;
     display: flex;
+    justify-content: center; 
     align-items: center;
 }
- 
+a:active{
+    color: #172121;
+}
+
+a:hover{
+    color: #F3F3F3 ;
+}
+
+a{
+    color: #BFACB5 ;
+}
+
+
+footer .footer-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center; 
+}
+
+footer .container .footer-item img.logo-icon{
+    display: none;
+    width: 50px; /* Adjust size as needed */
+}
+
+        
+
         /* Responsive */
         @media (max-width: 768px) {
             .package {
                 flex-direction: column !important;
                 text-align: center;
             }
-            .package-img, .package-description {
+
+            .package-img,
+            .package-description {
                 width: 100%;
             }
+
+
+    footer .container .footer-item img.logo {
+        display: none;
+    }
+    footer .container .footer-item img.logo-icon {
+        display: block;
+    }
         }
- 
     </style>
 </head>
 <body>
@@ -216,79 +333,97 @@ footer .container .footer-item img{
         </div>
     </nav>
 </header>
- 
-    <div class="container">
-        <h1>Photography Packages</h1>
-        
-        <div class="packages">
-            <!-- Package 1 (Image Right) -->
-            <div class="package">
-                <div class="package-description">
-                    <h2>Basic Package</h2>
-                    <p>Perfect for solo photoshoots or small events. Includes a 1-hour shoot and 20 edited photos.</p>
-                    <div class="package-price">€300</div>
-                </div>
-                <img src="/assets/Famil_Package.png" alt="Basic Package" class="package-img">
+
+<div class="container">
+    <h1>Photography Packages</h1>
+
+    <div class="packages">
+        <!-- Package 1 (Image Right) -->
+        <div class="package">
+            <div class="package-description">
+                <h2>Basic Package</h2>
+                <p>Perfect for solo photoshoots or small events. Includes a 1-hour shoot and 20 edited photos.</p>
+                <ul class="package-list">
+                    <li>1-hour shoot</li>
+                    <li>20 edited photos</li>
+                    <li>Online gallery</li>
+                </ul>
+                <div class="package-price">€ 300</div>
+                <a href="Contact.html" class="package-button">Contact Us</a>
             </div>
- 
-            <!-- Package 2 (Image Left) -->
-            <div class="package">
-                <div class="package-description">
-                    <h2>Standard Package</h2>
-                    <p>Ideal for couples or small groups. Includes a 2-hour shoot, 50 edited photos, and a personalized album.</p>
-                    <div class="package-price">€500</div>
-                </div>
-                <img src="image2.png" alt="Standard Package" class="package-img">
-            </div>
- 
-            <!-- Package 3 (Image Right) -->
-            <div class="package">
-                <div class="package-description">
-                    <h2>Premium Package</h2>
-                    <p>Tailored to your unique travel photography needs. Flexible number of locations or days. Can include candid shots, cultural immersion photos, or specific themes.</p>
-                    <div class="package-price">€900</div>
-                </div>
-                <img src="image3.png" alt="Premium Package" class="package-img">
-            </div>
- 
+            <img src="/Media/Images/Packages/Family.png" alt="Basic Package" class="package-img">
         </div>
- 
-        <div class="footer">
-            <p>Follow me on:</p>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+
+        <!-- Package 2 (Image Left) -->
+        <div class="package" id="Standard">
+            <div class="package-description">
+                <h2>Standard Package</h2>
+                <p>Ideal for couples or small groups. Includes a 2-hour shoot, 50 edited photos, and a personalized album.</p>
+                <ul class="package-list">
+                    <li>2-hour shoot</li>
+                    <li>50 edited photos</li>
+                    <li>Personalized album</li>
+                </ul>
+                <div class="package-price">€ 500,00</div>
+                <a href="Contact.html" class="package-button">Contact Us</a>
+            </div>
+            <img src="/Media/Images/Packages/individual.png" alt="Standard Package" class="package-img">
         </div>
- 
+
+        <!-- Package 3 (Image Right) -->
+        <div class="package">
+            <div class="package-description">
+                <h2>Premium Package</h2>
+                <p>Tailored to your unique travel photography needs. Flexible number of locations or days. Can include candid shots, cultural immersion photos, or specific themes.</p>
+                <ul class="package-list">
+                    <li>Flexible locations</li>
+                    <li>Candid shots</li>
+                    <li>Cultural immersion photos</li>
+                </ul>
+                <div class="package-price">€ 900,00</div>
+                <a href="Contact.html" class="package-button">Contact Us</a>
+            </div>
+            <img src="/Media/Images/Packages/Wedding.png" alt="Premium Package" class="package-img">
+        </div>
     </div>
- 
-</body>
+
+    <div class="footer">
+    </div>
+</div>
+
 <footer>
     <div class="container">
         <div class="footer-item">
-            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo" alt="">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/icon-logo.png" alt="Photobucket Logo Icon" class="logo-icon">
+        </div>
+        <div class="footer-item">
+            <h3>Follow me on</h3>
+        <div>
+                <p>Thank you for reaching us</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></i></i></a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></i></a>
+        </div>
+        </div>
+        </div>
+        <div class="footer-item">
+            <h3>Contact</h3>
+            <a href="#link">Email</a>
+            <a href="#link">Phone Number</a>
+            <a href="#link">Telephone</a>
         </div>
         <div class="footer-item">
             <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="Packages.html">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
+            <a href="#link">Portfolio</a>
+            <a href="#link">Packages</a>
+            <a href="#link">Home Page</a>
         </div>
     </div>
     <p>&copy; 2025 Photobucket. All rights reserved.</p>
 </footer>
 
+</body>
 </html>
- 
- 

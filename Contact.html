@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/Logo/Favicon.png?raw=true" type="image/x-icon">
     <style>
         body {
             font-family: 'Maven Pro', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #F3F3F3;
         }
-
+ 
         nav {
     display: flex;
     justify-content: space-between;
@@ -28,7 +31,7 @@
     width:100%;
     z-index:1;
 }
-
+ 
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -38,11 +41,11 @@ nav ul {
     flex-wrap: wrap;
     flex-grow: 1;
 }
-
+ 
 nav ul li {
     display: inline;
 }
-
+ 
 nav ul li a {
     display: block;
     color: #F3F3F3;
@@ -51,45 +54,52 @@ nav ul li a {
     text-decoration: none;
     border-radius: 16px; /* Add corner radius to links */
 }
-
+ 
 nav ul li a:hover {
     background-color: #F3F3F3;
     color: #444554;
 }
-
+ 
 .logo {
     width: 200px; /* Adjust size as needed */
     height: auto;
     margin-right: 20px; /* Add some space between the logo and the nav items */
 }
-
+ 
 /* Hamburger menu */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
+ 
 .hamburger div {
     width: 25px;
     height: 3px;
     background-color: #fff;
     margin: 4px;
 }
-
-
+ 
+ 
 nav ul.active {
     display: flex;
 }
-
+ 
         .container {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 2rem;
-            background: #fff;
+            padding: 2rem;           
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           
         }
+
+        #contain{
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            margin-bottom: 40px;
+            background-color: #F3F3F3;
+        }
+
         .title {
             text-align: center;
             font-size: 2rem;
@@ -128,6 +138,7 @@ nav ul.active {
             padding: 0.8rem;
             border: 1px solid #ccc;
             border-radius: 10px;
+            
             font-size: 1rem;
             width: 100%;
             box-sizing: border-box;
@@ -137,17 +148,19 @@ nav ul.active {
             resize: none;
         }
         button {
-            background-color: #007BFF;
-            color: white;
+            background-color: #E5D0CC;
+            color: #444554;
             padding: 0.8rem;
             border: none;
-            border-radius: 20px;
+            border-radius: 16px;
             font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: rgb(68, 69, 84);
+            color: #FFFFFF;
         }
         .social-media {
             text-align: center;
@@ -163,7 +176,7 @@ nav ul.active {
         .social-media a:hover {
             color: #007BFF;
         }
-        /* Footer */
+               /* Footer */
 footer {
     background-color:#444554; /* Black footer */
     border-top-right-radius: 16px;
@@ -171,20 +184,22 @@ footer {
     color: #F3F3F3;
     text-align: center;
     padding: 10px 0;
+    align-items: center;
 }
 footer .container{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #444554;
+    align-items: center;
 }
 footer .container .footer-item{
     width:30%;
     display:flex;
     flex-direction: column;
     height:max-content;
-    min-height:200px;
     background-color: #444554;
+    align-items: center;
+    
 }
 .container{
     margin:0 auto;
@@ -195,8 +210,56 @@ footer .container .footer-item img{
 
     width: 200px;
     display: flex;
+    justify-content: center; 
     align-items: center;
 }
+a:active{
+    color: #172121;
+}
+
+a:hover{
+    color: #F3F3F3 ;
+}
+
+a{
+    color: #BFACB5 ;
+}
+
+
+footer .footer-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center; 
+}
+
+footer .container .footer-item img.logo-icon{
+    display: none;
+    width: 50px; /* Adjust size as needed */
+}
+
+        
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .package {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .package-img,
+            .package-description {
+                width: 100%;
+            }
+
+
+    footer .container .footer-item img.logo {
+        display: none;
+    }
+    footer .container .footer-item img.logo-icon {
+        display: block;
+    }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -218,8 +281,8 @@ footer .container .footer-item img{
         </div>
     </nav>
 </header>
-
-<div class="container">
+ 
+<div class="container" id="contain">
     <h2 class="title">Contact Me</h2>
     <div class="form-section">
         <div class="image-container">
@@ -243,40 +306,39 @@ footer .container .footer-item img{
             </form>
         </div>
     </div>
-    <div class="social-media">
-        <p>Follow me on:</p>
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
 </div>
-</body>
 <footer>
     <div class="container">
         <div class="footer-item">
-            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo" alt="">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/icon-logo.png" alt="Photobucket Logo Icon" class="logo-icon">
+        </div>
+        <div class="footer-item">
+            <h3>Follow me on</h3>
+        <div>
+                <p>Thank you for reaching us</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></i></i></a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></i></a>
+        </div>
+        </div>
+        </div>
+        <div class="footer-item">
+            <h3>Contact</h3>
+            <a href="#link">Email</a>
+            <a href="#link">Phone Number</a>
+            <a href="#link">Telephone</a>
         </div>
         <div class="footer-item">
             <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="Packages.html">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
+            <a href="#link">Portfolio</a>
+            <a href="#link">Packages</a>
+            <a href="#link">Home Page</a>
         </div>
     </div>
     <p>&copy; 2025 Photobucket. All rights reserved.</p>
 </footer>
-
+</body>
 </html>

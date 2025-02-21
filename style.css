@@ -25,20 +25,20 @@ header{
     position: sticky;
     z-index:1;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(68, 69, 84);
     border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem; /* Add corner radius */
+    border-bottom-left-radius: 1rem;
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 20px;
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 20px;
-    width:100%;
     z-index:1;
 }
 
@@ -60,7 +60,7 @@ nav ul li a {
     display: block;
     color: #F3F3F3;
     text-align: center;
-    padding: 14px 20px;
+    padding: 20px 20px;
     text-decoration: none;
     border-radius: 16px; /* Add corner radius to links */
 }
@@ -98,7 +98,6 @@ nav ul.active {
 /* Hero section */
 .hero-section {
     height:50vh;
-    width:100%;
     position: relative;
     text-align: center;
     color: rgb(243, 243, 243);
@@ -111,6 +110,8 @@ nav ul.active {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .hero-image {
@@ -118,6 +119,8 @@ nav ul.active {
     height: auto;
     border-radius: 1rem; /* Add corner radius */
 }
+
+
 
 .hero-text {
     background-color: rgba(68, 69, 84, 0.4); /* Add a background color with transparency */
@@ -246,39 +249,91 @@ a{
     cursor: pointer;
 }
 
-/* Footer */
-footer {
-    background-color:#444554; /* Black footer */
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    color: #F3F3F3;
-    text-align: center;
-    padding: 10px 0;
-}
-footer .container{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-footer .container .footer-item{
-    width:30%;
-    display:flex;
-    flex-direction: column;
-    height:max-content;
-    min-height:200px;
-    background-color: #444554;
-}
-.container{
-    margin:0 auto;
-    width:80%;
-}
-
-footer .container .footer-item img{
-
-    width: 200px;
-    display: flex;
-    align-items: center;
-}
+        /* Footer */
+        footer {
+            background-color:#444554; /* Black footer */
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+            color: #F3F3F3;
+            text-align: center;
+            padding: 10px 0;
+            align-items: center;
+        }
+        footer .container{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer .container .footer-item{
+            width:30%;
+            display:flex;
+            flex-direction: column;
+            height:max-content;
+            background-color: #444554;
+            align-items: center;
+            
+        }
+        .container{
+            margin:0 auto;
+            width:80%;
+        }
+        
+        footer .container .footer-item img{
+        
+            width: 200px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+        a:active{
+            color: #172121;
+        }
+        
+        a:hover{
+            color: #F3F3F3 ;
+        }
+        
+        a{
+            color: #BFACB5 ;
+        }
+        
+        
+        footer .footer-icons{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center; 
+        }
+        
+        footer .container .footer-item img.logo-icon{
+            display: none;
+            width: 50px; /* Adjust size as needed */
+        }
+        
+                
+        
+                /* Responsive */
+                @media (max-width: 768px) {
+                    .package {
+                        flex-direction: column !important;
+                        text-align: center;
+                    }
+        
+                    .package-img,
+                    .package-description {
+                        width: 100%;
+                    }
+        
+        
+            footer .container .footer-item img.logo {
+                display: none;
+            }
+            footer .container .footer-item img.logo-icon {
+                display: block;
+            }
+                }
+        
 
 /* Responsive navbar */
 @media (max-width: 768px) {
@@ -337,5 +392,9 @@ footer .container .footer-item img{
     .hero-text {
         font-size: 1em; /* Adjust font size for very small screens */
         padding: 10px; /* Adjust padding for very small screens */
+    }
+    
+    .gallery img{
+        width:100%;
     }
 }
