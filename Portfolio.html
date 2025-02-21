@@ -4,173 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style>
-        body {
-            font-family: 'Maven Pro', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(68, 69, 84);
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem; /* Add corner radius */
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-top: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 20px;
-    width:100%;
-    z-index:1;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: block;
-    color: #F3F3F3;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border-radius: 16px; /* Add corner radius to links */
-}
-
-nav ul li a:hover {
-    background-color: #F3F3F3;
-    color: #444554;
-}
-
-.logo {
-    width: 200px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 20px; /* Add some space between the logo and the nav items */
-}
-
-/* Hamburger menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px;
-}
-
-
-nav ul.active {
-    display: flex;
-}
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        .header a:hover {
-            background-color: #555;
-        }
-
-        .section {
-            background-color: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-        }
-
-        .images {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .images img {
-            width: 30%;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .images img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Footer */
-footer {
-    background-color:#444554; /* Black footer */
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    color: #F3F3F3;
-    text-align: center;
-    padding: 10px 0;
-}
-footer .container{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-footer .container .footer-item{
-    width:30%;
-    display:flex;
-    flex-direction: column;
-    height:max-content;
-    min-height:200px;
-    background-color: #444554;
-}
-.container{
-    margin:0 auto;
-    
-    width:80%;
-}
-
-footer .container .footer-item img{
-
-    width: 200px;
-    display: flex;
-    align-items: center;
-}
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/Logo/Favicon.png?raw=true" type="image/x-icon">
+    <link rel="stylesheet" href="styleportfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 <header>
@@ -190,7 +27,7 @@ footer .container .footer-item img{
         </div>
     </nav>
 </header>
-
+<div class="container">
         <div class="section" id="america">
             <h2>America</h2>
             <div class="images">
@@ -227,33 +64,42 @@ footer .container .footer-item img{
             </div>
         </div>
     </div>
-</body>
+</div>
+
 <footer>
     <div class="container">
         <div class="footer-item">
-            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo" alt="">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo">
+            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/icon-logo.png" alt="Photobucket Logo Icon" class="logo-icon">
+        </div>
+        <div class="footer-item">
+            <h3>Follow me on</h3>
+        <div>
+                <p>Thank you for reaching us</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></i></i></a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></i></a>
+        </div>
+        </div>
+        </div>
+        <div class="footer-item">
+            <h3>Contact</h3>
+            <a href="#link">Email</a>
+            <a href="#link">Phone Number</a>
+            <a href="#link">Telephone</a>
         </div>
         <div class="footer-item">
             <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="Packages.html">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
+            <a href="#link">Portfolio</a>
+            <a href="#link">Packages</a>
+            <a href="#link">Home Page</a>
         </div>
     </div>
     <p>&copy; 2025 Photobucket. All rights reserved.</p>
 </footer>
+</body>
 
 </html>
 

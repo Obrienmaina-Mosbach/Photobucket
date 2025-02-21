@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>About Me - Photography</title>
     <style>
         :root {
-            --background-color: #f9f9f9; 
-            --accent-color: #ffcc66; 
-            --text-color: #333333; 
-            --secondary-text-color: #666666; 
-            --stars-color: #f5b700; 
-            --border-color: #e0e0e0; 
+            --background-color: #f9f9f9;
+            --accent-color: #ffcc66;
+            --text-color: #333333;
+            --secondary-text-color: #666666;
+            --stars-color: #f5b700;
+            --border-color: #e0e0e0;
         }
         
         body {
@@ -21,7 +22,7 @@
             margin: 0;
             padding: 0;
         }
-
+ 
         nav {
     display: flex;
     justify-content: space-between;
@@ -38,7 +39,7 @@
     width:100%;
     z-index:1;
 }
-
+ 
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -48,11 +49,11 @@ nav ul {
     flex-wrap: wrap;
     flex-grow: 1;
 }
-
+ 
 nav ul li {
     display: inline;
 }
-
+ 
 nav ul li a {
     display: block;
     color: #F3F3F3;
@@ -61,33 +62,33 @@ nav ul li a {
     text-decoration: none;
     border-radius: 16px; /* Add corner radius to links */
 }
-
+ 
 nav ul li a:hover {
     background-color: #F3F3F3;
     color: #444554;
 }
-
+ 
 .logo {
     width: 200px; /* Adjust size as needed */
     height: auto;
     margin-right: 20px; /* Add some space between the logo and the nav items */
 }
-
+ 
 /* Hamburger menu */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
+ 
 .hamburger div {
     width: 25px;
     height: 3px;
     background-color: #fff;
     margin: 4px;
 }
-
-
+ 
+ 
 nav ul.active {
     display: flex;
 }
@@ -98,7 +99,7 @@ nav ul.active {
             padding: 20px;
             text-align: center;
         }
-
+ 
         .profile-pic {
             width: 150px;
             height: 150px;
@@ -106,7 +107,7 @@ nav ul.active {
             object-fit: cover;
             margin-bottom: 20px;
         }
-
+ 
         h1 {
             font-size: 2rem;
             margin-bottom: 10px;
@@ -116,7 +117,7 @@ nav ul.active {
             font-size: 1rem;
             margin-bottom: 20px;
         }
-
+ 
         /* Reviews Section */
         .reviews {
             display: flex;
@@ -125,7 +126,7 @@ nav ul.active {
             justify-content: center;
             margin-top: 30px;
         }
-
+ 
         .review {
             background-color: white;
             border: 1px solid var(--border-color);
@@ -136,17 +137,17 @@ nav ul.active {
             text-align: left;
             transition: transform 0.2s ease-in-out;
         }
-
+ 
         .review:hover {
             transform: scale(1.05);
         }
-
+ 
         .review-header {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
-
+ 
         .reviewer-photo {
             width: 50px;
             height: 50px;
@@ -155,11 +156,11 @@ nav ul.active {
             border: 2px solid var(--accent-color);
             margin-right: 10px;
         }
-
+ 
         .stars {
             color: var(--stars-color);
         }
-
+ 
         /* Logos Section */
         .company-logos {
             display: flex;
@@ -168,7 +169,7 @@ nav ul.active {
             gap: 15px;
             margin-top: 30px;
         }
-
+ 
         .company-logo {
             width: 100px;
             height: 100px;
@@ -176,32 +177,51 @@ nav ul.active {
             opacity: 0.8;
             transition: opacity 0.2s;
         }
-
+ 
         .company-logo:hover {
             opacity: 1;
         }
-
-/* Footer */
-footer {
+        .social-media a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #d7b1b1;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-media a:hover {
+            color: #a56e87;
+        }
+ 
+        html{
+            overscroll-behavior: none;
+            -webkit-overflow-scrolling: none;
+            overflow-x: hidden;
+        }
+ 
+ /* Footer */
+ footer {
     background-color:#444554; /* Black footer */
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
     color: #F3F3F3;
     text-align: center;
     padding: 10px 0;
+    align-items: center;
 }
 footer .container{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 footer .container .footer-item{
     width:30%;
     display:flex;
     flex-direction: column;
     height:max-content;
-    min-height:200px;
     background-color: #444554;
+    align-items: center;
+    
 }
 .container{
     margin:0 auto;
@@ -212,8 +232,56 @@ footer .container .footer-item img{
 
     width: 200px;
     display: flex;
+    justify-content: center; 
     align-items: center;
 }
+a:active{
+    color: #172121;
+}
+
+a:hover{
+    color: #F3F3F3 ;
+}
+
+a{
+    color: #BFACB5 ;
+}
+
+
+footer .footer-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center; 
+}
+
+footer .container .footer-item img.logo-icon{
+    display: none;
+    width: 50px; /* Adjust size as needed */
+}
+
+        
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .package {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .package-img,
+            .package-description {
+                width: 100%;
+            }
+
+
+    footer .container .footer-item img.logo {
+        display: none;
+    }
+    footer .container .footer-item img.logo-icon {
+        display: block;
+    }
+        }
         
     </style>
 </head>
@@ -235,13 +303,13 @@ footer .container .footer-item img{
             </div>
         </nav>
     </header>
-
+ 
     <div class="container">
         <img src="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/About%20Me/image%20(3).jpeg?raw=true" alt="Photographer" class="profile-pic">
         <h1>About Me</h1>
         <p>
             Hey! I’m Mark, a 29-year-old photographer from California, and my camera has taken me to some of the most breathtaking places on Earth. From the towering peaks of the Swiss Alps to the vibrant streets of Tokyo, I find beauty in every corner of the world. My passion lies in capturing raw, unfiltered moments—whether it's the golden sunset over the Santorini coastline or the quiet charm of a hidden Parisian café.
-
+ 
                 I shoot with a Canon EOS R5, paired with my favorite 50mm prime lens for crisp portraits and a 16-35mm wide-angle lens for those sweeping landscape shots. Whether I’m photographing a solo traveler, a couple’s love story, or a breathtaking cityscape, my goal is always the same: to turn moments into memories.
                 
                 Where will my next adventure take me? Maybe to tell your story.
@@ -285,9 +353,9 @@ footer .container .footer-item img{
                 </div>
             </div>
         </div>
-            <!-- Add more reviews similarly -->
+           
         </div>
-
+ 
         <div class="company-logos">
             <img src="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/About%20Me/Nike.png?raw=true" alt="Company 1" class="company-logo">
             <img src="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/About%20Me/Bungee.png?raw=true" alt="Company 2" class="company-logo">
@@ -296,38 +364,40 @@ footer .container .footer-item img{
             <img src="https://github.com/Obrienmaina-Mosbach/Photobucket/blob/main/Media/Images/About%20Me/Cruxton.png?raw=true" alt="Company 5" class="company-logo">
         </div>
     </div>
-
-    <div class="footer">
-        <p>Follow me on:</p>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-item">
+                <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo">
+                <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/icon-logo.png" alt="Photobucket Logo Icon" class="logo-icon">
+            </div>
+            <div class="footer-item">
+                <h3>Follow me on</h3>
+            <div>
+                    <p>Thank you for reaching us</p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></i></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></i></a>
+            </div>
+            </div>
+            </div>
+            <div class="footer-item">
+                <h3>Contact</h3>
+                <a href="#link">Email</a>
+                <a href="#link">Phone Number</a>
+                <a href="#link">Telephone</a>
+            </div>
+            <div class="footer-item">
+                <h3>Welcome</h3>
+                <a href="#link">Portfolio</a>
+                <a href="#link">Packages</a>
+                <a href="#link">Home Page</a>
+            </div>
+        </div>
+        <p>&copy; 2025 Photobucket. All rights reserved.</p>
+    </footer>
+   
 </body>
-<footer>
-    <div class="container">
-        <div class="footer-item">
-            <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo" alt="">
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="Packages.html">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-    </div>
-    <p>&copy; 2025 Photobucket. All rights reserved.</p>
-</footer>
-
+ 
 </html>
