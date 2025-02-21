@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>About Me - Photography</title>
     <style>
         :root {
@@ -180,6 +181,22 @@ nav ul.active {
         .company-logo:hover {
             opacity: 1;
         }
+        .social-media a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #d7b1b1;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-media a:hover {
+            color: #a56e87;
+        }
+
+        html{
+            overscroll-behavior: none;
+            -webkit-overflow-scrolling: none;
+            overflow-x: hidden;
+        }
 
 /* Footer */
 footer {
@@ -213,6 +230,17 @@ footer .container .footer-item img{
     width: 200px;
     display: flex;
     align-items: center;
+}
+a:active{
+    color: #172121;
+}
+
+a:hover{
+    color: #F3F3F3 ; 
+}
+
+a{
+    color: #BFACB5 ;
 }
         
     </style>
@@ -285,7 +313,7 @@ footer .container .footer-item img{
                 </div>
             </div>
         </div>
-            <!-- Add more reviews similarly -->
+           
         </div>
 
         <div class="company-logos">
@@ -297,11 +325,7 @@ footer .container .footer-item img{
         </div>
     </div>
 
-    <div class="footer">
-        <p>Follow me on:</p>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-    </div>
+   
 </body>
 <footer>
     <div class="container">
@@ -309,22 +333,23 @@ footer .container .footer-item img{
             <img src="https://raw.githubusercontent.com/Obrienmaina-Mosbach/Photobucket/refs/heads/main/Media/Images/Logo/Logo.png" alt="Photobucket Logo" class="logo" alt="">
         </div>
         <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
+            <h3>Follow me on</h3>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-item">
+            <h3>Contact</h3>
+            <a href="#link">Email</a>
+            <a href="#link">Phone Number</a>
+            <a href="#link">Telephone</a>
         </div>
         <div class="footer-item">
             <h3>Welcome</h3>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
-        </div>
-        <div class="footer-item">
-            <h3>Welcome</h3>
-            <a href="Packages.html">Link</a>
-            <a href="#link">Link</a>
-            <a href="#link">Link</a>
+            <a href="#link">Portfolio</a>
+            <a href="#link">Packages</a>
+            <a href="#link">Home Page</a>
         </div>
     </div>
     <p>&copy; 2025 Photobucket. All rights reserved.</p>
