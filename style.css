@@ -374,6 +374,11 @@ a{
         -webkit-overflow-scrolling: none;
         overflow-x: hidden;
     }
+
+    footer .container{
+        flex-direction: column;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -396,5 +401,9 @@ a{
     
     .gallery img{
         width:100%;
+    }
+
+    .gallery-container{
+            width:100%;
     }
 }
